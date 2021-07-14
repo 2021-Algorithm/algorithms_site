@@ -19,9 +19,19 @@ def solution_two(array, commands):
     return answer
 
 
+def solution_three(array, commands):
+    return list(map(lambda x: sorted(array[x[0] - 1:x[1]])[x[2] - 1], commands)) # lambda map 을 사용해서 돌리고, list 화
+
+
+def solution_four(array, commands):
+    return [sorted(array[x[0] - 1: x[1]])[x[2] - 1] for x in commands] # List Comprehension
+
+
 if __name__ == '__main__':
     array = [1, 5, 2, 6, 3, 7, 4]
-    commends = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
-    print(solution(array, commends))
-    print(solution_two(array, commends))
+    commands = [[2, 5, 3], [4, 4, 1], [1, 7, 3]]
+    print(solution(array, commands))
+    print(solution_two(array, commands))
+    print(solution_three(array, commands))
+    print(solution_four(array, commands))
     # result [5, 6, 3]
