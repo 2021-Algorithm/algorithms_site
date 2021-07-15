@@ -4,7 +4,7 @@ def solution(new_id):
     answer = ''
     answer = new_id.lower()
     answer = re.sub('[^0-9a-z\_\.\-]', '', answer)
-    answer = re.sub('\.\.+', '..', answer)
+    answer = re.sub('\.\.+', '.', answer)
     answer = re.sub('^\.|\.$', '', answer)
 
     if len(answer) == 0:

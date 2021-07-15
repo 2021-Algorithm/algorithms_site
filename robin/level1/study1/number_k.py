@@ -20,11 +20,11 @@ def solution_two(array, commands):
 
 
 def solution_three(array, commands):
-    return list(map(lambda x: sorted(array[x[0] - 1:x[1]])[x[2] - 1], commands)) # lambda map 을 사용해서 돌리고, list 화
+    return list(map(lambda x: sorted(array[x[0] - 1:x[1]])[x[2] - 1], commands))  # lambda map 을 사용해서 돌리고, list 화
 
 
 def solution_four(array, commands):
-    return [sorted(array[x[0] - 1: x[1]])[x[2] - 1] for x in commands] # List Comprehension
+    return [sorted(array[x[0] - 1: x[1]])[x[2] - 1] for x in commands]  # List Comprehension
 
 
 if __name__ == '__main__':
