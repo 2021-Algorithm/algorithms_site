@@ -1,3 +1,5 @@
 .idea
 
 tree.iml
+
+*.class
