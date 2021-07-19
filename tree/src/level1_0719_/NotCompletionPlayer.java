@@ -22,7 +22,6 @@ public class NotCompletionPlayer {
     public String sol2(String[] participant, String[] completion) {
         String answer = "";
 
-
         for(int i = 0 ; i < participant.length ; i++) {
             for(int j =  0 ; j < completion.length ; j++) {
 
@@ -88,5 +87,32 @@ public class NotCompletionPlayer {
         return null;
     }
 
+    public String sol5(String[] participant, String[] completion) {
+        Map<Integer, String> hashMap = new HashMap<>();
+        long temp = 0L;
+
+        for(String part : participant) {
+            hashMap.put(part.hashCode(), part);
+            temp += part.hashCode();
+        }
+
+        for(String comp : completion) {
+            temp -= comp.hashCode();
+        }
+
+        for(int key : hashMap.keySet()) {
+            System.out.println("hashMap = " + key + "," + hashMap.get(key));
+        }
+        System.out.println("temp = " + temp);
+        System.out.println(hashMap.get((int)temp));
+
+        return hashMap.get((int)temp);
+    }
+
+
+    public static void main(String[] args) {
+        NotCompletionPlayer n = new NotCompletionPlayer();
+        n.sol5(new String[]{"leo", "kiki", "eden"}, new String[]{"eden", "kiki"});
+    }
 
 }
