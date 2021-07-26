@@ -10,8 +10,7 @@ public class Budget {
         Arrays.sort(d);
         for (int i = 0; i < d.length; i++) {
             sum += d[i];
-//            System.out.println("sum " + sum);
-//            System.out.println("answer " + answer);
+
             answer++;
             if (sum == budget) break;
             else if (sum > budget) answer--;
