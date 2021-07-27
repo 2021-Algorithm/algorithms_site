@@ -1,3 +1,4 @@
+# 오류 찾음............! 두번째 분기처리에서 elif
 def solution(n, lost, reserve):
     student = {}
     for i in range(1, n + 1):
@@ -15,7 +16,7 @@ def solution(n, lost, reserve):
                 student[k] += 1
                 student[k - 1] -= 1
 
-            if student.get(k + 1) == 2:
+            elif student.get(k + 1) == 2:
                 student[k] += 1
                 student[k + 1] -= 1
 
@@ -39,8 +40,7 @@ def solution2(n, lost, reserve):
 
 if __name__ == '__main__':
     n = 5
-    lost = [2, 4]
-    reserve = [1, 3, 5]
-    # result = 4
+    lost = [1, 2, 5]
+    reserve = [1, 2]
     print(solution(n, lost, reserve))
-    print(solution(n, lost, reserve))
+    print(solution2(n, lost, reserve))
