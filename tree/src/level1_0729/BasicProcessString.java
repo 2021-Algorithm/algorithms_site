@@ -14,4 +14,12 @@ public class BasicProcessString {
             return false;
         }
     }
+
+    public boolean sol2(String s) {
+
+
+        return s.matches("^[0-9]{4}|{6}$");
+
+
+    }
 }
