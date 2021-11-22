@@ -37,7 +37,7 @@ if __name__ == '__main__':
 
     if n == 2:
         gcd_value = gcd(input_data[0], input_data[1])
-    elif n ==  3:
+    elif n == 3:
         gcd_value = gcd(input_data[0], gcd(input_data[1], input_data[2]))
 
     for i in divisor(gcd_value):
