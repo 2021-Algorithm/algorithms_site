@@ -49,10 +49,10 @@ def try_second():
 
 def try_third():
     """
-    success: 재귀 깊이가 기본적으 1000회 이기 때문에, sys.setrecursionlimit(10**9)으로 늘려주면 된다.
+    success: 재귀 깊이가 기본적으로 1000회 이기 때문에, sys.setrecursionlimit(10**9)으로 늘려주면 된다.
     """
     import sys
-    sys.setrecursionlimit(10**9)
+    sys.setrecursionlimit(10 ** 9)
     n = int(input())
 
     tree = [[] for _ in range(n + 1)]
