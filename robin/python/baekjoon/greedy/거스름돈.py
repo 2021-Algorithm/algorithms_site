@@ -14,6 +14,7 @@ def solution():
 
     if coin == 1 or coin == 3:
         print(-1)
+        return
 
     mok, remain = divmod(coin, 5)
 
